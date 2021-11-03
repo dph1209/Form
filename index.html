@@ -11,22 +11,22 @@
         <div class="input-form">
             <label for="username">Username:<br />
                 <input id="username" type="text" value="" name="username" size="50"
-                       placeholder="Enter your user name"><br /><br />
+                       placeholder="Nhập tên tài khoản"><br /><br />
             </label>
 
             <label for="email">EMAIL:<br />
                 <input id="email" type="email" value="" name="emailed" size="50"
-                       placeholder="Enter a valid email address"><br /><br />
+                       placeholder="Nhập email"><br /><br />
             </label>
 
             <label for="password">Password:<br />
                 <input id="password" type="password" value="" name="password" size="50"
-                       placeholder="Enter your password"><br /><br />
+                       placeholder="Nhập mật khẩu"><br /><br />
             </label>
 
             <label for="confirm-password">Confirm password:<br />
                 <input id="confirm-password" type="password" value="" name="password" size="50"
-                       placeholder="Confirm your password"><br /><br />
+                       placeholder="Xác nhận mật khẩu"><br /><br />
             </label>
 
             <input id="btn-submit" type="button" value="submit">
@@ -53,10 +53,10 @@
                 errorMsg += "Không được để email trống\n";
             }
             if(passwordInput.value.length === 0) {
-                errorMsg += "Không được để password trống\n";
+                errorMsg += "Không được để mật khẩu trống\n";
             }
             if(confirmPassInput.value.length === 0) {
-                errorMsg += "Không được để password trống\n";
+                errorMsg += "Không được để xác nhận mật khẩu trống\n";
             }
             if(passwordInput.value !== confirmPassInput.value) {
                 errorMsg += "Confirm password không chính xác\n";
