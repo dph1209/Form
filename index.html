@@ -7,31 +7,31 @@
 </head>
 
 <body>
-    <form>
+    <div>
         <div class="input-form">
             <label for="username">Username:<br />
-                <input id="username" type="text" value="" name="username" size="30"
+                <input id="username" type="text" value="" name="username" size="50"
                        placeholder="Enter your user name"><br /><br />
             </label>
 
             <label for="email">EMAIL:<br />
-                <input id="email" type="email" value="" name="emailed" size="30"
+                <input id="email" type="email" value="" name="emailed" size="50"
                        placeholder="Enter a valid email address"><br /><br />
             </label>
 
             <label for="password">Password:<br />
-                <input id="password" type="password" value="" name="password" size="30"
+                <input id="password" type="password" value="" name="password" size="50"
                        placeholder="Enter your password"><br /><br />
             </label>
 
             <label for="confirm-password">Confirm password:<br />
-                <input id="confirm-password" type="password" value="" name="password" size="30"
+                <input id="confirm-password" type="password" value="" name="password" size="50"
                        placeholder="Confirm your password"><br /><br />
             </label>
 
-            <input id="btn-submit" type="submit" value="submit">
+            <input id="btn-submit" type="button" value="submit">
         </div>
-    </form>
+    </div>
 
     <script>
         const usernameInput = document.getElementById("username");
@@ -40,8 +40,8 @@
         const confirmPassInput = document.getElementById("confirm-password");
         const btnSubmit = document.getElementById("btn-submit");
 
-        btnSubmit.addEventListener("submit", (e) => {
-            e.preventDefault();
+        btnSubmit.addEventListener("click", (e) => {
+            // e.preventDefault();
             let errorMsg = "";
             if(usernameInput.value.length === 0) {
                 errorMsg += "Không được để tên đăng nhập trống\n";
