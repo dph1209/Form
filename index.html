@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    
+<html lang="vi">
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <div class="input-form">
+            <label for="username">Username:<br />
+                <input id="username" type="text" value="" name="username" size="30"
+                       placeholder="Enter your user name"><br /><br />
+            </label>
+
+            <label for="email">EMAIL:<br />
+                <input id="email" type="email" value="" name="emailed" size="30"
+                       placeholder="Enter a valid email address"><br /><br />
+            </label>
+
+            <label for="password">Password:<br />
+                <input id="password" type="password" value="" name="password" size="30"
+                       placeholder="Enter your password"><br /><br />
+            </label>
+
+            <label for="confirm-password">Confirm password:<br />
+                <input id="confirm-password" type="password" value="" name="password" size="30"
+                       placeholder="Confirm your password"><br /><br />
+            </label>
+
+            <input id="btn-submit" type="submit" value="submit">
+        </div>
+    </form>
+
+    <script>
+        const usernameInput = document.getElementById("username");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const confirmPassInput = document.getElementById("confirm-password");
+        const btnSubmit = document.getElementById("btn-submit");
+
+        btnSubmit.addEventListener("submit", (e) => {
+            e.preventDefault();
+            let errorMsg = "";
+            if(usernameInput.value.length === 0) {
+                errorMsg += "Không được để tên đăng nhập trống\n";
+            }
+            else if(usernameInput.value.length < 10) {
+                errorMsg += "Tên đăng nhập phải lớn hơn hoặc bằng 10 ký tự\n";
+            }
+            if(emailInput.value.length === 0) {
+                errorMsg += "Không được để email trống\n";
+            }
+            if(passwordInput.value.length === 0) {
+                errorMsg += "Không được để password trống\n";
+            }
+            if(confirmPassInput.value.length === 0) {
+                errorMsg += "Không được để password trống\n";
+            }
+            if(passwordInput.value !== confirmPassInput.value) {
+                errorMsg += "Confirm password không chính xác\n";
+            }
+
+            if(errorMsg.length !== 0) {
+                alert(errorMsg);
+            }
+            else {
+                alert("Đăng ký thành công!!");
+            }
+        })
+    </script>
+</body>
+</html>
